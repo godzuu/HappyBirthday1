@@ -29,6 +29,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
 </head>
 
+
 <body>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
@@ -85,20 +86,27 @@
 			</div>
 		</div>
 		<div class="row cake-cover">
-			<div class="col-md-12 texr-center">
+			<div class="col-md-2 text-center">
+				<img src="thudao1.jpg" id="left_image" style="display: none; width: 100%;">
+			</div>
+			<div class="col-md-8 text-center">
 				<div class="cake">
-				  <div class="velas">
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				  </div>
-				  <div class="cobertura"></div>
-				  <div class="bizcocho"></div>
+					<div class="velas">
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+					</div>
+					<div class="cobertura"></div>
+					<div class="bizcocho"></div>
 				</div>
 			</div>
+			<div class="col-md-2 text-center">
+				<img src="thudao2.jpg" id="right_image" style="display: none; width: 100%;">
+			</div>
 		</div>
+		
 		<div class="row message">
 			<div class="col-md-12">
 				<p>Hôm nay là...</p>
@@ -165,6 +173,27 @@
 
   ga('create', 'UA-58229732-1', 'auto');
   ga('send', 'pageview');
+  document.getElementById("wish_message").addEventListener("click", function() {
+    // Hiển thị hai hình ảnh
+    document.getElementById("left_image").style.display = "block";
+    document.getElementById("right_image").style.display = "block";
+});
+
 
 </script>
 </html>
+
+<style>
+#left_image, #right_image {
+    max-width: 150%; /* Tăng kích thước lên 150% */
+    height: auto; 
+    max-height: 600px; /* Tăng chiều cao tối đa */
+    border: 8px solid #000; /* Đóng khung với đường viền màu đen, độ dày 8px */
+    padding: 5px; /* Khoảng cách giữa hình ảnh và đường viền */
+    border-radius: 15px; /* Làm góc của khung trở nên mềm mại */
+}
+
+
+
+
+</style>
